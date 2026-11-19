@@ -5,7 +5,7 @@ These are NOT OFFICIAL GTFS files of these cities.
 
 Using the SafeTravelPH app and Parasol tools/programs, we identified the realtime tracks, travel/stopping times and distances, and stopping patterns. Then, we use AddTransit.com to easily validate syntactically the generated GTFS files.
 
-## Editing, Visualizing, and Analyzing the GTFS Files
+## Option for Editing, Visualizing, and Analyzing the GTFS Files
 The GTFS Static files in this repository can be opened, edited, visualized, and analyzed directly in your browser using GTFS·X — a free, no-signup GTFS editor and transit service planner. This is useful for reviewing the routes and trips we've built, correcting stop or schedule data, and exploring the service coverage before publishing.
 
 Getting started:
