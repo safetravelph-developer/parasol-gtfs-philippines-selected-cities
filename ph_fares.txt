@@ -1,0 +1,14 @@
+fare_id,mode_name,route_type,fare_model,currency_type,base_fare,base_distance_km,per_km_rate,flag_down,per_minute_rate,min_fare,surge_enabled,surge_multiplier_default,surge_multiplier_max,rounding_rule,fare_set_by,discount_student_pct,discount_senior_pct,discount_pwd_pct,vat_exempt_on_discount,data_status,notes
+PUJ_TRAD,Traditional jeepney,1501,distance_stepped,PHP,13.00,4,1.80,,,13.00,false,,,nearest_0.25,LTFRB,20,20,20,true,illustrative,Non-bus 4W: base fare covers first 4 km then per-km
+PUJ_MOD_NONAC,Modern jeepney - non-aircon,1501,distance_stepped,PHP,14.00,4,1.80,,,14.00,false,,,nearest_0.25,LTFRB,20,20,20,true,illustrative,Non-bus 4W: base covers first 4 km
+PUJ_MOD_AC,Modern jeepney - aircon,1501,distance_stepped,PHP,15.00,4,1.80,,,15.00,false,,,nearest_0.25,LTFRB,20,20,20,true,illustrative,Non-bus 4W: base covers first 4 km
+BUS_CITY_ORD,City bus - ordinary,3,distance_stepped,PHP,13.00,5,2.20,,,13.00,false,,,nearest_1.00,LTFRB,20,20,20,true,illustrative,Bus: base covers first 5 km
+BUS_CITY_AC,City bus - aircon,3,distance_stepped,PHP,15.00,5,2.50,,,15.00,false,,,nearest_1.00,LTFRB,20,20,20,true,illustrative,Bus: base covers first 5 km
+BUS_PROV_ORD,Provincial bus - ordinary,3,distance_stepped,PHP,12.00,5,1.65,,,12.00,false,,,nearest_1.00,LTFRB regional office,20,20,20,true,illustrative,Bus: base covers first 5 km; varies by region
+BUS_PROV_AC,Provincial bus - aircon,3,distance_stepped,PHP,14.00,5,2.25,,,14.00,false,,,nearest_1.00,LTFRB regional office,20,20,20,true,illustrative,Bus: base covers first 5 km; varies by region
+UV_EXPRESS,UV Express,715,distance_stepped,PHP,30.00,4,2.40,,,30.00,false,,,nearest_1.00,LTFRB,20,20,20,true,illustrative,Non-bus 4W: base covers first 4 km
+TRICYCLE,Tricycle,1100,distance_stepped,PHP,20.00,4,5.00,,,20.00,false,,,nearest_1.00,LGU,20,20,20,true,illustrative,Same stepped model as 4W transit; base/rate set per LGU so override per city
+TNVS_4W,4W TNVS,1500,tnvs_dynamic,PHP,45.00,,14.00,,2.00,85.00,true,1.0,2.0,nearest_1.00,LTFRB cap + platform,,,,false,illustrative,Fare = base + (km * per_km) + (min * per_minute); times surge; floored at min_fare
+TNVS_3W,3W TNVS,1100,tnvs_dynamic,PHP,40.00,,10.00,,1.00,40.00,true,1.0,1.5,nearest_1.00,Platform,,,,false,illustrative,Same formula as 4W TNVS
+TNVS_2W,2W TNVS,1100,tnvs_dynamic,PHP,50.00,,10.00,,1.00,50.00,true,1.0,1.5,nearest_1.00,LTFRB + platform,,,,false,illustrative,Motorcycle taxi; same formula as 4W TNVS
+TAXI_METERED,Taxi (not in your list),1500,metered,PHP,,,13.50,45.00,2.00,,false,,,nearest_1.00,LTFRB,20,20,20,true,illustrative,Fare = flag_down + (km * per_km) + (min * per_minute); no surge. Delete row if out of scope
