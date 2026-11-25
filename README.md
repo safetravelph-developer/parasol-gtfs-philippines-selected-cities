@@ -22,4 +22,16 @@ Getting started:
 
 6. Export. When you're done, export a spec-clean GTFS .zip (or GeoJSON) and either host it anywhere or share it back with the SafeTravelPH team for review.
 
-If you are an public transport agency or operator, or a local government unit, feel free to reach out to us to collect routes and trips data, and co-create and validate your locality's GTFS datasets. You can email us at developer@safetravel.ph. 
+If you are an public transport agency or operator, or a local government unit, feel free to reach out to us to collect routes and trips data, and co-create and validate your locality's GTFS datasets. You can email us at developer@safetravel.ph.
+
+## Philippine Fares (Unofficial Extension)
+
+The ph_fares.txt file in this repository is an unofficial, community-maintained extension and is not part of the official GTFS specification or endorsed by the GTFS maintainers. Standard GTFS fare files (fare_attributes.txt, fare_rules.txt and the Fares v2 tables) can't represent how Philippine fares actually work, such as base fares covering a minimum distance (4 km for non-bus modes, 5 km for buses) with per-km charges beyond it, LGU-set tricycle rates, metered taxi fares with flag-down and time components, and TNVS pricing with per-km, per-minute and surge components. 
+
+This file therefore uses a custom schema with added fields like fare_model, base_distance_km, per_minute_rate and surge_multiplier_max, so consumers should treat it as a supplementary reference and not as an interoperable GTFS feed. 
+
+We aim to keep the rates current by updating them whenever the LTFRB publishes new fare orders, but rows marked illustrative in data_status have not yet been verified against an official source, and the LTFRB's published issuances always take precedence over this dataset. 
+
+App developers are welcome to use this file in their own fare estimators, trip planners and other commuter tools as our contribution to the Philippine transit community, with the understanding that they should check rates against official LTFRB sources before showing them to end users. 
+
+Please open an issue or pull request, ideally with a link to the relevant LTFRB memorandum circular or fare order, if you spot an outdated or incorrect value.
